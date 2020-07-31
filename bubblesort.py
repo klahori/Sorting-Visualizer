@@ -7,7 +7,6 @@ upper_bound = 15
 for i in range(size):
      arr.append(randrange(lower_bound, upper_bound + 1))
 
-print("Orignial:", arr)
 # Bubble Sort
 def bubble_sort(arr):
     n = len(arr)
@@ -32,4 +31,3 @@ def bubble_sort(arr):
     return arr
 
 
-print("Sorted:  ", bubble_sort(arr))
