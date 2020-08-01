@@ -4,6 +4,7 @@ from random import randrange
 from bubblesort import bubble_sort
 from selectionsort import selection_sort
 from insertionsort import insertion_sort
+from mergesort import merge_sort
 
 class Validity(unittest.TestCase):
 
@@ -34,8 +35,14 @@ class Validity(unittest.TestCase):
         cases = self.generate_testcases()
         for case in cases:
             self.assertListEqual(sorted(case), insertion_sort(case))
+    
+    def mergesort_test(self):
+        cases = self.generate_testcases()
+        for case in cases:
+            self.assertListEqual(sorted(case), merge_sort(case))
 
 tester = Validity()
 tester.bubblesort_test()
 tester.selectionsort_test()
 tester.insertionsort_test()
+tester.mergesort_test()
