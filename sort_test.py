@@ -3,7 +3,7 @@ from random import randrange
 
 from bubblesort import bubble_sort
 from selectionsort import selection_sort
-
+from insertionsort import insertion_sort
 
 class Validity(unittest.TestCase):
 
@@ -29,8 +29,13 @@ class Validity(unittest.TestCase):
         cases = self.generate_testcases()
         for case in cases:
             self.assertListEqual(sorted(case), selection_sort(case))
-        
+    
+    def insertionsort_test(self):
+        cases = self.generate_testcases()
+        for case in cases:
+            self.assertListEqual(sorted(case), insertion_sort(case))
 
 tester = Validity()
 tester.bubblesort_test()
 tester.selectionsort_test()
+tester.insertionsort_test()

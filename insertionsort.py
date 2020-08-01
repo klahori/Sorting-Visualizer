@@ -1,11 +1,12 @@
-from random import randrange
-# Generate random array
-arr = []
-size = 5
-lower_bound = -15
-upper_bound = 15
-for i in range(size):
-     arr.append(randrange(lower_bound, upper_bound + 1))
-
-print("Orignial:", arr)
 # Insertion Sort
+def insertion_sort(arr):
+     
+     for i in range(len(arr)):
+          j = i - 1
+          key = arr[i] 
+          while j >= 0 and key < arr[j]:
+               arr[j], arr[j + 1] = arr[j + 1], arr[j] 
+               j -=1
+               
+     return arr
+
