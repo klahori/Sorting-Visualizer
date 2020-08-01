@@ -1,13 +1,3 @@
-from random import randrange
-# Generate random array
-arr = []
-size = 10
-lower_bound = -15
-upper_bound = 15
-for i in range(size):
-     arr.append(randrange(lower_bound, upper_bound + 1))
-
-print("Orignial:", arr)
 def merge_sort(arr):
     if len(arr) > 1:
         m = len(arr) // 2
@@ -25,4 +15,3 @@ def merge_sort(arr):
         arr += r
         
     return arr
-print("Sorted:", merge_sort(arr))
